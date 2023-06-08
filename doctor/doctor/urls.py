@@ -19,4 +19,5 @@ from django.urls import path,include
 
 urlpatterns = [
     path('star-wars/',include('doctorapp.urls')),
+    path('admin/', admin.site.urls),
 ]
