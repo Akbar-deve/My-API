@@ -13,6 +13,7 @@ class DocotorView(APIView):
         try:
             data=request.data
             data["name"]=str(data["name"]).title()
+            print(data)
             serializer = DoctorSerializer(data=data)
             if serializer.is_valid():
                 serializer.save()
