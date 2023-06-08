@@ -27,7 +27,8 @@ class DocotorView(APIView):
     def get(self,request):
         try:
             data=doctor.objects.all()
-            print("this is shivam ")
+            print("edited")
+          
             ser=DoctorSerializer(data,many=True)
             return Response(ser.data,status=status.HTTP_200_OK)
         
