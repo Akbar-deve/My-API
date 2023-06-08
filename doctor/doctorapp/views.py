@@ -27,8 +27,10 @@ class DocotorView(APIView):
     def get(self,request):
         try:
             data=doctor.objects.all()
+            print("this is shivam ")
             ser=DoctorSerializer(data,many=True)
             return Response(ser.data,status=status.HTTP_200_OK)
+        
         except Exception as e:
             traceback.print_exc()
 
